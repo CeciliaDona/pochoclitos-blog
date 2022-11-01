@@ -20,7 +20,7 @@
 <body class="bg-body">
     <header class="container__header">
         <div class="nav__mobile-menu">
-            <a href="#nav" class="open"><img src="../images/icons/menu2.png" alt="Menu"></a>
+            <a href="#nav" class="open"><img class="open__img" src="../images/icons/menu2.png" alt="Menu"></a>
             <a href="../pages/login.html"><i class="login-icon bi bi-person-circle text-white fs-1"></i></a>
         </div>
 
@@ -36,7 +36,7 @@
                 <li class="nav__menu-items"><a href="../pages/recommendation.html">RECOMENDACIONES</a></li>
                 <li class="nav__menu-items nav__item-select"><a href="../pages/contact.html">CONTACTO</a></li>
                 <div class="nav__login-register">
-                    <li class="nav__menu-login"><a href="../pages/login.html">INICIAR SESIÓN</a></li>
+                    <li class="li__login"><a class="nav__menu-login" href="../pages/login.html">INICIAR SESIÓN</a></li>
                     <li class="nav__menu-register">
                         <!-- Button trigger modal -->
                         <button type="button" class="btn nav__menu-register text-white py-0 px-0 fw-semibold" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -62,49 +62,56 @@
                         <form>
                             <div class="row mb-3">
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control bg-secondary bg-opacity-25" placeholder="Nombre y Apellido" aria-label="First name">
+                                    <input type="text" class="form-control bg-secondary bg-opacity-25" required
+                                        placeholder="Nombre y Apellido" aria-label="First name" name="name">
                                 </div>
                             </div>
 
                             <div class="row mb-3">
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control bg-secondary bg-opacity-25" placeholder="Nombre de usuario" aria-label="First name">
+                                    <input type="text" class="form-control bg-secondary bg-opacity-25" required
+                                        placeholder="Nombre de usuario" aria-label="First name" name="user_name">
                                 </div>
-                            </div>
-
-                            <div class="row mb-3">
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control bg-secondary bg-opacity-25" id="inputEmail3" placeholder="Correo electrrónico">
-                            </div>
                             </div>
 
                             <div class="row mb-3">
                                 <div class="col-sm-10">
-                                <input type="email" class="form-control bg-secondary bg-opacity-25" id="inputEmail3" placeholder="Repetir correo electrrónico">
+                                    <input type="email" class="form-control bg-secondary bg-opacity-25" id="inputEmail3"
+                                        placeholder="Correo electrónico" required name="e_mail">
                                 </div>
-                            </div>
-
-                            <div class="row mb-3">
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control bg-secondary bg-opacity-25" id="inputPassword3" placeholder="Contraseña">
-                            </div>
                             </div>
 
                             <div class="row mb-3">
                                 <div class="col-sm-10">
-                                <input type="password" class="form-control bg-secondary bg-opacity-25" id="inputPassword3" placeholder="Repetir contraseña">
+                                    <input type="email" class="form-control bg-secondary bg-opacity-25" id="inputEmail3"
+                                        placeholder="Repetir correo electrónico" required name="user_e-mail">
                                 </div>
                             </div>
-                        
+
+                            <div class="row mb-3">
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control bg-secondary bg-opacity-25"
+                                        id="inputPassword3" placeholder="Contraseña" required name="user_password">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control bg-secondary bg-opacity-25"
+                                        id="inputPassword3" placeholder="Repetir contraseña" required name="user_password">
+                                </div>
+                            </div>
+
                             <div class="row mb-3">
                                 <div class="col-12">
                                     <div class="form-chec custom-control custom-checkbox">
-                                      <input class="form-check-input custom-control-input" type="checkbox" id="gridCheck">
-                                      <label class="form-check-label custom-control-label text-dark" for="gridCheck">
-                                        Suscríbete a nuestro Newsletter
-                                      </label>
+                                        <input class="form-check-input custom-control-input" type="checkbox"
+                                            id="gridCheck" name="check-box_newsletter">
+                                        <label class="form-check-label custom-control-label" for="gridCheck">
+                                            Suscríbete a nuestro Newsletter
+                                        </label>
                                     </div>
-                                  </div>
+                                </div>
                             </div>
                             <button type="submit" class="btn btn-register text-white fw-normal">Registrarse</button>
                         </form>
@@ -125,31 +132,31 @@
                     <form class="contact__form">
                         <div class="row mb-3 mb-lg-3">
                             <div>
-                                <input type="text" class="form-width form-control bg-light" placeholder="Nombre" aria-label="First name">
+                                <input type="text" class="form-width form-control bg-light" placeholder="Nombre" aria-label="First name" required name="contact_name">
                             </div>
                         </div>
 
                         <div class="row mb-3 mb-lg-3">
                             <div>
-                                <input type="text" class="form-width form-control bg-light" placeholder="Apellido" aria-label="Last name">
+                                <input type="text" class="form-width form-control bg-light" placeholder="Apellido" aria-label="Last name" required name="contact_last-name">
                             </div>
                         </div>
 
                         <div class="row mb-3 mb-lg-3">
                             <div>
-                                <input type="email" class="form-control bg-light" id="inputEmail3" placeholder="Correo electrrónico">
+                                <input type="email" class="form-control bg-light" id="inputEmail3" placeholder="Correo electrónico" required name="contact_email">
                             </div>
                         </div>
 
                         <div class="row mb-3 mb-lg-3">
                             <div>
-                                <input type="number" class="form-control bg-light" id="inputNumber" placeholder="Teléfono">
+                                <input type="number" class="form-control bg-light" id="inputNumber" placeholder="Teléfono" required name="contact_phone">
                             </div>
                         </div>     
                         
                         <div class="mb-3 mb-lg-3">
                             <div>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Consulta" rows="3"></textarea>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Consulta" rows="3" required name="contact_text"></textarea>
                             </div>
                         </div>
 
@@ -164,7 +171,7 @@
                     </div>
                 </div>
             </div>
-            <a href="../pages/error-404.html"><img class="wpp-icon" src="../images/icons/whatsapp.png" alt="Whatsapp"></a>
+            <a href="https://web.whatsapp.com/"><img class="wpp-icon" src="../images/icons/whatsapp.png" alt="Whatsapp"></a>
         </div>
     </main>
 
@@ -176,9 +183,9 @@
             </div>
             
             <div class="footer__icons">
-                <a href="../pages/error-404.html"><i class="icon-redes bi bi-twitter text-white fs-1"></i></a>
-                <a href="../pages/error-404.html"><i class="icon-redes bi bi-instagram text-white fs-1"></i></a>
-                <a href="../pages/error-404.html"><i class="icon-redes bi bi-facebook text-white fs-1"></i></a>
+                <a href="https://twitter.com/?lang=es"><i class="icon-redes bi bi-twitter text-white fs-1"></i></a>
+                <a href="https://www.instagram.com/"><i class="icon-redes bi bi-instagram text-white fs-1"></i></a>
+                <a href="https://www.facebook.com/"><i class="icon-redes bi bi-facebook text-white fs-1"></i></a>
             </div>
             <div class="footer__contact">
                 <p>Vía e-mail: pelis@pochoclitos.com</p>

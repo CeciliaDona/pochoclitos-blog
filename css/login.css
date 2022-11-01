@@ -22,17 +22,37 @@ a {
 
 /*------------------ NAV MOBILE --------------*/
 
+.container__header{
+  width: 70%;
+  height: 490px;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
 .open {
   display: block;
   position: fixed;
   left: 20px;
-  top: 20px;
+  top: 16px;
+}
+
+.open__img {
+  width: 30px;
+}
+
+.bi-list{
+  font-size: 2.5rem;
+  color: var(--white)
 }
 
 .login-icon {
   position: fixed;
   right: 20px;
-  top: 20px;
+  top: 15px;
+  color: var(--white);
 }
 
 .close {
@@ -42,33 +62,32 @@ a {
   top: 15px;
 }
 
-.open img {
-  width: 35px;
-  height: 35px;
-}
-
 .close img {
   width: 20px;
   height: 20px;
 }
 
 .logo {
-  width: 95px;
+  width: 110px;
   margin-bottom: 40px;
+}
+
+.bi-person-circle{
+  font-size: 2.3rem !important;
 }
 
 .nav__container {
   display: none;
   position: fixed;
-  top: 0;
-  width: 70%;
-  height: 90%;
   background-color: #1c0c35;
   padding-top: 0;
   border: dotted 2px white;
   z-index: 1;
   animation-name: menu-nav;
   animation-duration: 0.7s;
+  position: relative;
+  height: 100vh;
+  width: 60vw;
 }
 
 #nav:target {
@@ -84,11 +103,13 @@ a {
   justify-content: space-between;
   align-items: flex-start;
   padding-left: 0;
+  z-index: 1;
 }
 
 .nav__menu-items,
-.nav__menu-login {
-  margin-bottom: 30px;
+.nav__menu-login,
+.li__login {
+  margin-bottom: 36px;
 }
 
 @keyframes menu-nav {
@@ -131,18 +152,18 @@ a {
 }
 
 ul li a {
-  font-size: 0.74rem;
   color: white;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.3px;
+  font-size: 0.9rem;
 }
 
 .nav__menu-items,
 .nav__menu-login,
 .nav__menu-register {
-  font-size: 0.8rem !important;
-  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
   font-family: "Montserrat", sans-serif !important;
 }
 
@@ -196,10 +217,6 @@ main {
   padding: 10px;
 }
 
-.nav__menu-register:hover {
-  background: rgb(192, 30, 192);
-  border: solid 2px rgb(192, 30, 192);
-}
 
 .login__forgot-password {
   margin-bottom: 15px;
@@ -325,6 +342,10 @@ img a {
     flex-direction: center;
   }
 
+  .li__login {
+    margin-top: 36px;
+  }
+
   #nav {
     background: none;
     width: 100%;
@@ -344,15 +365,20 @@ img a {
   }
 
   ul li a,
-  .nav__menu-register {
-    font-size: 0.74rem;
-    color: white;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 0.2px;
-    cursor: pointer;
-    transition: 0.7s;
-  }
+    .nav__menu-register, 
+    .nav__menu-login li {
+      font-size: 0.74rem !important;
+      color: white;
+      font-weight: 500;
+      text-decoration: none;
+      letter-spacing: 0.2px;
+      cursor: pointer;
+      transition: 0.7s;
+    }
+
+    .nav__menu-login {
+      font-size: 0.74rem !important;
+    }
 
   .nav__menu-login,
   .nav__menu-register,
@@ -397,11 +423,20 @@ img a {
   }
 
   .nav__menu-login {
-    padding: 0.3em 0.6em;
+    padding: 0.45em 0.6em;
     border-radius: 25px;
     border: solid 2px white;
     text-align: center;
-    transition: 0.7s;
+    transition: 0.5s;
+  }
+
+  .nav__menu-login:hover,
+  .nav__menu-login a:hover  {
+    color: black;
+  }
+
+  .nav__menu-login:hover {
+    background: white;
   }
 
   .nav__menu-register {
@@ -410,7 +445,7 @@ img a {
     background: var(--btn-main);
     border: solid 2px var(--btn-main);
     text-align: center;
-    transition: 0.7s;
+    transition: 0.5s;
   }
 
   .nav__menu-register a:hover {
@@ -418,18 +453,8 @@ img a {
     font-weight: 600;
   }
 
-  .nav__menu-login a:hover {
-    color: black;
-    font-weight: 700;
-  }
-
   .nav__menu-register:hover {
-    background: rgb(192, 30, 192);
-    border: solid 2px rgb(192, 30, 192);
-  }
-
-  .nav__menu-login:hover {
-    background: rgb(249, 245, 249);
+    background: rgb(230, 71, 230);
   }
 
   /*------------- MAIN TABLET --------------*/
@@ -539,20 +564,21 @@ img a {
   }
 
   ul li a,
-  .nav__menu-register {
-    font-size: 0.9rem !important;
-    font-weight: 600;
-    letter-spacing: 1px;
-  }
-
-  .nav__menu-login,
   .nav__menu-register,
-  .nav__menu-items {
-    margin: 0 12px;
-  }
-
   .nav__menu-login {
-    padding: 0.4em 1.1em;
+      font-size: 0.9rem !important;
+      font-weight: 600;
+      letter-spacing: 1px;
+  }
+  
+      .nav__menu-login,
+      .nav__menu-register,
+      .nav__menu-items {
+      margin: 0 12px;
+  }
+  
+  .nav__menu-login {
+      padding: 0.54em 1.1em;
   }
 
   .nav__menu-register {

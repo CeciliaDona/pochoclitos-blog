@@ -37,14 +37,14 @@
 
             <ul class="nav__menu">
                 <div>
-                    <li><a href="/index.html"><img class="logo" id="inicio" src="../../images/icons/logo.png"                    alt="Logo-pochoclitos"></a> </li>
+                    <li><a href="/index.html"><img class="logo" id="inicio" src="../../images/icons/logo.png" alt="Logo-pochoclitos"></a> </li>
                 </div>
                 <li class="nav__menu-items"><a class="active" href="../../index.html">INICIO</a></li>
                 <li class="nav__menu-items"><a href="../../pages/about-us.html">NOSOTROS</a></li>
                 <li class="nav__menu-items"><a href="../../pages/recommendation.html">RECOMENDACIONES</a></li>
                 <li class="nav__menu-items item-contacto"><a href="../../pages/contact.html">CONTACTO</a></li>
                 <div class="nav__login-register">
-                    <li class="nav__menu-login"><a href="../../pages/login.html">INICIAR SESIÓN</a></li>
+                    <li class="li__login"><a class="nav__menu-login" href="../../pages/login.html">INICIAR SESIÓN</a></li>
                     <li class="nav__menu-register">
                         <!-- Button trigger modal -->
                         <button type="button" class="btn-d nav__menu-register text-white py-0 px-0 fw-semibold"
@@ -70,43 +70,43 @@
                         <form>
                             <div class="row mb-3">
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control bg-secondary bg-opacity-25"
-                                        placeholder="Nombre y Apellido" aria-label="First name">
+                                    <input type="text" class="form-control bg-secondary bg-opacity-25" required
+                                        placeholder="Nombre y Apellido" aria-label="First name" name="name">
                                 </div>
                             </div>
 
                             <div class="row mb-3">
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control bg-secondary bg-opacity-25"
-                                        placeholder="Nombre de usuario" aria-label="First name">
-                                </div>
-                            </div>
-
-                            <div class="row mb-3">
-                                <div class="col-sm-10">
-                                    <input type="email" class="form-control bg-secondary bg-opacity-25" id="inputEmail3"
-                                        placeholder="Correo electrrónico">
+                                    <input type="text" class="form-control bg-secondary bg-opacity-25" required
+                                        placeholder="Nombre de usuario" aria-label="First name" name="user_name">
                                 </div>
                             </div>
 
                             <div class="row mb-3">
                                 <div class="col-sm-10">
                                     <input type="email" class="form-control bg-secondary bg-opacity-25" id="inputEmail3"
-                                        placeholder="Repetir correo electrrónico">
+                                        placeholder="Correo electrónico" required name="e_mail">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control bg-secondary bg-opacity-25" id="inputEmail3"
+                                        placeholder="Repetir correo electrónico" required name="user_e-mail">
                                 </div>
                             </div>
 
                             <div class="row mb-3">
                                 <div class="col-sm-10">
                                     <input type="password" class="form-control bg-secondary bg-opacity-25"
-                                        id="inputPassword3" placeholder="Contraseña">
+                                        id="inputPassword3" placeholder="Contraseña" required name="user_password">
                                 </div>
                             </div>
 
                             <div class="row mb-3">
                                 <div class="col-sm-10">
                                     <input type="password" class="form-control bg-secondary bg-opacity-25"
-                                        id="inputPassword3" placeholder="Repetir contraseña">
+                                        id="inputPassword3" placeholder="Repetir contraseña" required name="user_password">
                                 </div>
                             </div>
 
@@ -114,14 +114,14 @@
                                 <div class="col-12">
                                     <div class="form-chec custom-control custom-checkbox">
                                         <input class="form-check-input custom-control-input" type="checkbox"
-                                            id="gridCheck">
+                                            id="gridCheck" name="check-box_newsletter">
                                         <label class="form-check-label custom-control-label" for="gridCheck">
                                             Suscríbete a nuestro Newsletter
                                         </label>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn-register text-white fw-normal">Registrarse</button>
+                            <button type="submit" class="btn btn-register text-white fw-normal">Registrarse</button>
                         </form>
                     </div>
 
@@ -194,12 +194,12 @@
                             </button>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item">
+                                    <a href="../error-404.html" class="dropdown-item">
                                         Recientes
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item">
+                                    <a href="../error-404.html" class="dropdown-item">
                                         Relevantes
                                     </a>
                                 </li>
@@ -214,7 +214,7 @@
                                 <img class="media__image rounded-circle" src="../../images/coments_users/foto-user.png" alt="user" width="50" height="50">
                                 <form class="media__form media d-flex">
                                     <textarea class="media__input" type="text" placeholder="Comentar..." ></textarea>
-                                    <a class="media__boton border-0 bg-transparent m-auto">
+                                    <a href="../error-404.html" class="media__boton border-0 bg-transparent m-auto">
                                     <i class="bi bi-send-fill"></i>
                                     </a>
                                 </form>
@@ -226,11 +226,11 @@
                                 <div class="media__body">
                                     <p class="media__body--name">Javi</p>
                                     <p class="media__body--comment">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam dolore similique
+                                        Muy linda, la vi con mis amigos 👌🙌
                                     </p>
                                     <div class="media__body-btns btns text-right d-flex">
-                                        <a class="btns__btn--like ms-2">Me gusta</a>
-                                        <a class="btns__btn--answe ms-2">Responder</a>
+                                        <a href="../error-404.html" class="btns__btn--like ms-2">Me gusta</a>
+                                        <a href="../error-404.html" class="btns__btn--answe ms-2">Responder</a>
                                         <i class="bi bi-hand-thumbs-up-fill ms-2"><span class="span__likes">1</span></i>
                                         <p class="btns__btn--day ms-3">1 día</p>
                                     </div>
@@ -243,11 +243,11 @@
                                 <div class="media__body">
                                     <p class="media__body--name">Ramiro</p>
                                     <p class="media__body--comment">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam dolore similique
+                                        🤣🤣🤣🤣🤣🤣🤣
                                     </p>
                                     <div class="media__body-btns btns text-right d-flex">
-                                        <a class="btns__btn--like ms-2">Me gusta</a>
-                                        <a class="btns__btn--answe ms-2">Responder</a>
+                                        <a href="../error-404.html" class="btns__btn--like ms-2">Me gusta</a>
+                                        <a href="../error-404.html" class="btns__btn--answe ms-2">Responder</a>
                                         <i class="bi bi-hand-thumbs-up-fill ms-2"><span class="span__likes">4</span></i>
                                         <p class="btns__btn--day ms-3">1 día</p>
                                     </div>
@@ -260,11 +260,11 @@
                                 <div class="media__body">
                                     <p class="media__body--name">Matías</p>
                                     <p class="media__body--comment">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam dolore similique
+                                        De qué se ríe el de arriba? 🥸...                            
                                     </p>
                                     <div class="media__body-btns btns text-right d-flex">
-                                        <a class="btns__btn--like ms-2">Me gusta</a>
-                                        <a class="btns__btn--answe ms-2">Responder</a>
+                                        <a href="../error-404.html" class="btns__btn--like ms-2">Me gusta</a>
+                                        <a href="../error-404.html" class="btns__btn--answe ms-2">Responder</a>
                                         <i class="bi bi-hand-thumbs-up-fill ms-2"><span class="span__likes">2</span></i>
                                         <p class="btns__btn--day ms-3">2 día</p>
                                     </div>
@@ -277,11 +277,11 @@
                                 <div class="media__body">
                                     <p class="media__body--name">Sofi</p>
                                     <p class="media__body--comment">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam dolore similique
+                                        Espectacularrrr!!!                                                                 
                                     </p>
                                     <div class="media__body-btns btns text-right d-flex">
-                                        <a class="btns__btn--like ms-2">Me gusta</a>
-                                        <a class="btns__btn--answe ms-2">Responder</a>
+                                        <a href="../error-404.html" class="btns__btn--like ms-2">Me gusta</a>
+                                        <a href="../error-404.html" class="btns__btn--answe ms-2">Responder</a>
                                         <i class="bi bi-hand-thumbs-up-fill ms-2"><span class="span__likes">5</span></i>
                                         <p class="btns__btn--day ms-3">3 día</p>
                                     </div>
@@ -294,11 +294,11 @@
                                 <div class="media__body">
                                     <p class="media__body--name">Lourdes</p>
                                     <p class="media__body--comment">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam dolore similique
+                                        No me gustó mucho... muy fantaseosa
                                     </p>
                                     <div class="media__body-btns btns text-right d-flex">
-                                        <a class="btns__btn--like ms-2">Me gusta</a>
-                                        <a class="btns__btn--answe ms-2">Responder</a>
+                                        <a href="../error-404.html" class="btns__btn--like ms-2">Me gusta</a>
+                                        <a href="../error-404.html" class="btns__btn--answe ms-2">Responder</a>
                                         <i class="bi bi-hand-thumbs-up-fill ms-2"><span class="span__likes">4</span></i>
                                         <p class="btns__btn--day ms-3">5 día</p>
                                     </div>
@@ -309,7 +309,7 @@
                 </div>
             </div>
         </section>
-        <a href="../error-404.html"><img class="wpp-icon" src="/images/icons/whatsapp.png" alt="Whatsapp"></a>
+        <a href="https://web.whatsapp.com/"><img class="wpp-icon" src="/images/icons/whatsapp.png" alt="Whatsapp"></a>
     </div>
     <footer class="container__footer">
         <h2 class="footer__title">POCHOCLITOS</h2>
@@ -319,9 +319,9 @@
             </div>
 
             <div class="footer__icons">
-                <a href="../error-404.html"><i class="icon-redes bi bi-twitter text-white fs-1"></i></a>
-                <a href="../error-404.html"><i class="icon-redes bi bi-instagram text-white fs-1"></i></a>
-                <a href="../error-404.html"><i class="icon-redes bi bi-facebook text-white fs-1"></i></a>
+                <a href="https://twitter.com/?lang=es"><i class="icon-redes bi bi-twitter text-white fs-1"></i></a>
+                <a href="https://www.instagram.com/"><i class="icon-redes bi bi-instagram text-white fs-1"></i></a>
+                <a href="https://www.facebook.com/"><i class="icon-redes bi bi-facebook text-white fs-1"></i></a>
             </div>
             <div class="footer__contact">
                 <p>Vía e-mail: pelis@pochoclitos.com</p>
